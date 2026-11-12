@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 import { Compass, ChevronUp, Send, X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface QuickNavigationDrawerProps {
   activeSection: string;
   onNavigate: (sectionId: string) => void;
 }
 
-const SCENES = [
-  { id: 'hero', index: '01', label: 'The Overture', shortLabel: 'Overview' },
-  { id: 'works', index: '02', label: 'Selected Works', shortLabel: 'Works' },
-  { id: 'disciplines', index: '03', label: 'Disciplines & Method', shortLabel: 'Method' },
-  { id: 'studio', index: '04', label: 'The Collective', shortLabel: 'Studio' },
-  { id: 'inquiry', index: '05', label: 'Project Initiation', shortLabel: 'Inquiry' },
-];
-
 export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
   activeSection,
   onNavigate,
 }) => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const { language, t } = useLanguage();
+
+  const SCENES = [
+    { id: 'hero', index: '01', label: language === 'en' ? 'The Overture · Horizon' : 'El Horizonte', shortLabel: language === 'en' ? 'Overview' : 'Inicio' },
+    { id: 'works', index: '02', label: language === 'en' ? 'Curated Estates' : 'Propiedades Curadas', shortLabel: language === 'en' ? 'Estates' : 'Propiedades' },
+    { id: 'disciplines', index: '03', label: language === 'en' ? 'Advisory & Scope' : 'Asesoría y Alcance', shortLabel: language === 'en' ? 'Advisory' : 'Asesoría' },
+    { id: 'studio', index: '04', label: language === 'en' ? 'The Atelier & Salon' : 'El Salón y Práctica', shortLabel: language === 'en' ? 'Salon' : 'Salón' },
+    { id: 'inquiry', index: '05', label: language === 'en' ? 'Confidential Inquiry' : 'Consulta Privada', shortLabel: language === 'en' ? 'Inquire' : 'Consulta' },
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -26,13 +28,13 @@ export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
 
   return (
     <>
-      {/* Desktop Floating Right-Side Scene Indexer (Mixed Navigation Architecture) */}
+      {/* Desktop Floating Right-Side Scene Indexer */}
       <aside
         className="hidden xl:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col items-end space-y-2 pointer-events-auto"
         aria-label="Scene Indexer"
       >
-        <div className="p-2.5 rounded-2xl bg-zinc-950/80 backdrop-blur-md border border-zinc-800/80 shadow-2xl flex flex-col space-y-1.5">
-          <div className="text-[10px] font-mono text-zinc-500 uppercase px-2 py-1 tracking-wider border-b border-zinc-800/60 mb-1">
+        <div className="p-2.5 rounded-2xl bg-[#1b100a]/85 backdrop-blur-md border border-amber-900/40 shadow-2xl flex flex-col space-y-1.5">
+          <div className="text-[10px] font-mono text-amber-400/80 uppercase px-2 py-1 tracking-wider border-b border-amber-900/40 mb-1">
             Story Index
           </div>
           {SCENES.map((scene) => {
@@ -43,13 +45,13 @@ export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
                 onClick={() => onNavigate(scene.id)}
                 className={`group flex items-center justify-between gap-3 px-3 py-1.5 rounded-lg text-xs transition-all ${
                   isActive
-                    ? 'bg-zinc-800 text-white font-medium shadow-sm'
-                    : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60'
+                    ? 'bg-[#2e1910] text-white font-medium border border-amber-500/40 shadow-sm'
+                    : 'text-amber-200/60 hover:text-white hover:bg-[#24130c]'
                 }`}
                 aria-current={isActive ? 'step' : undefined}
                 aria-label={`Jump to Scene ${scene.index}: ${scene.label}`}
               >
-                <span className="font-mono text-[11px] text-amber-400">
+                <span className="font-mono text-[11px] text-amber-400 font-semibold">
                   {scene.index}
                 </span>
                 <span className="whitespace-nowrap">
@@ -57,7 +59,7 @@ export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
                 </span>
                 <span
                   className={`w-1.5 h-1.5 rounded-full transition-all ${
-                    isActive ? 'bg-amber-400 scale-125' : 'bg-zinc-700 group-hover:bg-zinc-500'
+                    isActive ? 'bg-amber-400 scale-125 shadow-sm shadow-amber-500/50' : 'bg-amber-900/70 group-hover:bg-amber-600'
                   }`}
                   aria-hidden="true"
                 />
@@ -67,20 +69,20 @@ export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
         </div>
       </aside>
 
-      {/* Mobile-First Floating Quick Dock (Strictly under 15% viewport height cap) */}
+      {/* Mobile-First Floating Quick Dock */}
       <div
         className="md:hidden fixed bottom-4 left-4 right-4 z-40 pointer-events-auto"
         aria-label="Mobile Navigation Dock"
       >
-        <div className="h-12 bg-zinc-950/90 backdrop-blur-lg border border-zinc-800 rounded-full px-4 flex items-center justify-between shadow-2xl shadow-black/80">
+        <div className="h-12 bg-[#1b100a]/92 backdrop-blur-lg border border-amber-900/50 rounded-full px-4 flex items-center justify-between shadow-2xl shadow-black/80">
           {/* Quick Scene Drawer Trigger */}
           <button
             onClick={() => setMobileDrawerOpen(true)}
-            className="flex items-center gap-2 text-xs font-medium text-zinc-300 hover:text-white"
+            className="flex items-center gap-2 text-xs font-medium text-amber-200/80 hover:text-white"
             aria-label="Open Scene Navigator"
           >
             <Compass className="w-4 h-4 text-amber-400" aria-hidden="true" />
-            <span className="font-mono text-amber-400">
+            <span className="font-mono text-amber-400 font-semibold">
               {SCENES.find((s) => s.id === activeSection)?.index || '01'}
             </span>
             <span className="truncate max-w-[120px]">
@@ -92,15 +94,15 @@ export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
           <div className="flex items-center gap-2">
             <button
               onClick={() => onNavigate('inquiry')}
-              className="flex items-center gap-1.5 px-3 py-1 bg-zinc-100 text-zinc-950 font-medium text-xs rounded-full shadow-sm hover:bg-white"
+              className="flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold text-xs rounded-full shadow-sm hover:brightness-110"
             >
-              <span>Inquire</span>
-              <Send className="w-3 h-3 text-zinc-800" aria-hidden="true" />
+              <span>{t('nav.inquiry')}</span>
+              <Send className="w-3 h-3 text-white" aria-hidden="true" />
             </button>
 
             <button
               onClick={scrollToTop}
-              className="w-7 h-7 rounded-full bg-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white"
+              className="w-7 h-7 rounded-full bg-[#27150e] flex items-center justify-center text-amber-300 hover:text-white"
               aria-label="Back to Top"
             >
               <ChevronUp className="w-3.5 h-3.5" aria-hidden="true" />
@@ -112,21 +114,21 @@ export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
       {/* Mobile Scene Selector Bottom Sheet */}
       {mobileDrawerOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex flex-col justify-end p-4 md:hidden animate-in fade-in duration-150"
+          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex flex-col justify-end p-4 md:hidden animate-in fade-in duration-150"
           onClick={() => setMobileDrawerOpen(false)}
         >
           <div
-            className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 space-y-4 max-h-[70vh] overflow-y-auto"
+            className="bg-[#1c100a] border border-amber-900/50 rounded-2xl p-5 space-y-4 max-h-[70vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between pb-3 border-b border-zinc-800">
-              <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
-                <Compass className="w-4 h-4" aria-hidden="true" />
+            <div className="flex items-center justify-between pb-3 border-b border-amber-900/40">
+              <div className="flex items-center gap-2 text-xs font-mono text-amber-400 font-semibold">
+                <Compass className="w-4 h-4 text-amber-400" aria-hidden="true" />
                 <span>DIRECT SCENE JUMP</span>
               </div>
               <button
                 onClick={() => setMobileDrawerOpen(false)}
-                className="p-1 rounded-lg text-zinc-400 hover:text-white"
+                className="p-1 rounded-lg text-amber-300 hover:text-white"
                 aria-label="Close Scene Selector"
               >
                 <X className="w-5 h-5" aria-hidden="true" />
@@ -145,18 +147,18 @@ export const QuickNavigationDrawer: React.FC<QuickNavigationDrawerProps> = ({
                     }}
                     className={`w-full flex items-center justify-between p-3 rounded-xl text-left text-sm transition-colors ${
                       isActive
-                        ? 'bg-zinc-800 text-white font-medium'
-                        : 'text-zinc-300 hover:bg-zinc-800/50'
+                        ? 'bg-[#2d180f] text-white font-medium border border-amber-500/40'
+                        : 'text-amber-100 hover:bg-[#25130c]'
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-amber-400">
+                      <span className="font-mono text-xs text-amber-400 font-semibold">
                         {scene.index}
                       </span>
                       <span>{scene.label}</span>
                     </div>
                     {isActive && (
-                      <span className="w-2 h-2 rounded-full bg-amber-400" aria-hidden="true" />
+                      <span className="w-2 h-2 rounded-full bg-amber-400 shadow-sm shadow-amber-500/50" aria-hidden="true" />
                     )}
                   </button>
                 );

@@ -1,0 +1,326 @@
+Universal Elementor Image-Based
+Interactive Homepage Build Prompt - Mobile-first interaction and search-friendly edition (SEO)
+
+Universal Elementor Image-Based
+Interactive Homepage Build Prompt
+
+Act as a creative web designer, visual storyteller, and developer. Build exactly one professional interactive homepage that introduces the business and directs visitors to its key content and actions. Adapt its design to the project's purpose, audience, and brand.
+This prompt is universal across businesses, not an invitation to build multiple pages.
+The current project brief determines the setting, scene order, interactions, identity, and style. Examples and previous builds must not override it.
+Recommend linear, branching, or mixed navigation based on the visitor's needs and the brief; do not automatically default to linear scrolling.
+Mobile usability, useful content,
+accessibility, and search discoverability are baseline requirements from the first concept, not optional finishing work.
+Design the mobile interaction independently from desktop. A responsive layout alone does not prove that the mobile experience is fast, accessible, or search-ready. Follow the current relevant Google Search Essentials, mobile-first indexing and JavaScript SEO guidance, and use WCAG 2.2 AA as the accessibility target. Verify current official guidance when implementing it. Do not promise rankings, indexing, rich results, a perfect performance score, or blanket compliance.
+
+Required conversation order
+Follow these stages in order, starting at the next unfinished stage. Reuse answers, preferences, assets, and approvals already supplied. Do not
+restart completed stages or treat permission for one stage as permission for the next.
+1. Collect the unanswered business basics.
+2. Establish the images-and-logo choice: A, B, or C.
+3. Establish who creates the storyboard: A or B. This is a separate choice from the asset choice.
+4. Create or review the storyboard according to that choice, and present the complete visual journey directly in chat.
+5. Ask whether I want adjustments.
+Incorporate my requested changes into the storyboard before seeking approval.
+6. Obtain concept approval, unless I have already approved this adjustments stage; do not force a second approval.
+7. Complete the production assets, build the single homepage draft, and carry out the focused browser checks.
+
+8. Publish only with authorization for the current project. Before advancing, check which stage is complete and what remains unanswered. Do not skip the storyboard-creator choice, substitute an external file for the in-chat storyboard, or infer build approval from a choice to generate images or a storyboard.
+
+Adapt every build to its purpose
+
+Keep the initial conversation simple.
+Reuse everything already supplied and ask only the unanswered basics, in one short message:
+ 
+What is the business name, and what products or services does it offer?
+• Where is it located, and which areas does it serve?
+• What should visitors mainly do on the website?
+• What visual style do you prefer, or should I choose?
+• Any preferred colors, or should I choose? Keep business-offering questions in this initial basics stage. Read and reuse earlier answers before asking anything.
+Never ask the user to repeat an offering they already supplied. If the offering is genuinely missing and blocks the concept, resolve it with one brief follow-up in this basics stage before moving to the images and logo step. Do not infer the offering from the domain name alone. Keen visual stvle and color preferences as separate questions.
+Do not ask for a logo, images, or reference websites in this initial
+message; ask about these in the next step after the basic answers.
+Do not turn these into a long questionnaire. Infer the likely
+audience and a sensible homepage • flow from the business. Use the
+f
+connected website and existing platform when available. The scope X is already decided: one homepage.
+Do not ask which pages to build, how many pages are needed, or whether to build a full website. Do not ask upfront about platform, technical setup, scene counts, or draft IDs. Ask a targeted follow-up only when a missing detail actually blocks the next step, such as not knowing which website to edit.
+Move from the basic answers to the images-and-logo choice, then the images-and-logo choice, then the storyboard-creator choice, before presenting creative concepts. Do not carry a previous project's industry, setting, palette, copy, navigation labels, scene count, page structure, or interaction metaphor into a new build. No house, room, door, central hub, or other specific setting is required.
+Choose the experience around what visitors need to understand or accomplish. A journey may be linear, branching, exploratory, or a combination within the homepage.
+Use the number of scenes and content destinations the homepage needs. Do not force every business into a physical place or make every content area immersive. Use conventional readable layouts tor tasks and content that benefit from them. Create one homepage draft.
+Its choices may reveal content within that homepage or link to verified existing pages and authorized external destinations. A scene, branch, or content
+destination does not require a new page. Do not create additional pages, propose a multi-page sitemap, or redesign linked destinations. If a destination does not exist, provide suitable content within the homepage rather than inventing a URL. Preserve unrelated existing work. Only change this single-homepage scope if I explicitly request additional pages later.
+
+Required visual approach
+
+Use realistic photographic imagery, including Al-generated images, as the foundation of visual storytelling.
+Generate a coordinated asset set when
+suitable images are missing and the selected asset option calls for generation. Follow the project's brand and references while keeping a convincing photographic appearance.
+Use image-based animation: controlled O zooms, pans, layered parallax, clipping, • masks, reveals, and subtle blends. Do not build modeled 3D scenes, WebGL/Three.js environments, or game f like graphics unless I explicitly request 3D. If an effect is difficult with images, improve the assets or simplify the transition rather than silently switching to 3D.
+Keep editable text, buttons, and navigation separate from generated artwork. Generated environments and brand images must not be presented as evidence of actual products, premises, people, or results.
+
+Make interaction meaningful
+
+
+For each major interaction, explain:
+What I see → what I do → what changes or where | arrive → how | continue or return.
+Motion should reveal something useful, 9 establish a relationship, guide a choice, * or provide a sense of progression.
+Avoid adding animation solely as decoration. When a concept promises movement into a scene or subject, the transition must visually complete that action before revealing its destination content.
+Normal scrolling between readable content sections is acceptable where it supports the approved design. It must not substitute for a promised visual transition. Describe the actual behavior accurately: image-based zooms and blends do not automatically create convincing uninterrupted travel, regardless of whether the experience is called cinematic or 2.5D.
+Connect images through matching composition, focal points, perspective, lighting, subject identity, and visual cues. A zoom can lead naturally into a related close-up or destination image.
+Do not claim that enlarging one image
+囚
+reveals details or spaces that were never generated. Avoid unexplained jumps between unrelated images.
+If scrolling controls a sequence, define X a finite progression: stopping holds the current state and reverse scrolling reverses it where appropriate. Pin the visual stage only for as long as the approved interaction needs. Do not merely scroll the scene off-screen when the intended action is to move through or into it.
+Use explicit selections for meaningful branches. Brief timed transitions may follow those selections. Provide understandable direct navigation, return paths where needed, and a Skip Animation / View Content option.
+Visitors must be able to reach the primary action without completing a cinematic sequence.
+Mobile-first interaction — required default
+Build a compact mobile experience out of the box. Preserve the business, imagery, story, content and primary actions across devices while adapting how visitors move between them.
+• Show the business purpose and a direct route to its primary action on the first usable phone screen. Add a clear optional Enter / Explore action when the approved concept benefits from a visual journey. Use project-specific wording, not a fixed house or doorway metaphor.
+
+• On phones and small tablets, default to taps and ordinary content scrolling. Do not require multiple screen heights of scrolling, pinned scenes, scroll scrubbing, scroll-jacking, autoplay tours, or repeated transitions before visitors can reach useful content. Desktop cinematic scrolling does not imply permission to copy it onto mobile.
+
+• A mobile entry selection may use a brief transition, usually about 200- f 400 ms and no more than 450 ms for ordinary navigation. These are design defaults, not WCAG thresholds. Favor a fade or very small movement. If a longer effect is essential, explain it in the mobile storyboard and obtain agreement before implementing it.
+
+• Do not simply play the desktop camera movement faster. Remove large zooms, long parallax and complex doorway/scene masks from mobile navigation unless
+specifically approved after a convincing phone demonstration.
+Keep the visual identity through consistent destination imagery and restrained transitions.
+• Let visitors access key content directly without entering the story.
+Keep clear Back navigation, preserve useful entered form values and reading position, and support browser Back. Avoid repeating the introduction on every return.
+• Keep room/scene descriptions and decorative spacing compact. Put useful property/product/service information and the action near the top of each destination. Use a short preview image where a fullscreen decorative image would force another screen of scrolling. Do not force all content into a single screen or make text smaller to avoid legitimate reading scroll.
+• Keep a gallery's photo, angle controls and return action close together. Support touch and keyboard without capturing
+ordinary vertical page scrolling. Full images should remain viewable without cropping away essential details.
+• Use readable body text, normally around 16 CSS pixels, and at least 16px form inputs where needed to avoid mobile auto-zoom. Aim for 44×44 CSS-pixel controls where practical; verify WCAG 2.2
+minimum target size or its spacing exceptions rather than claiming every control must legally be 44px.
+Avoid overlaps and hover-only functionality.
+• Use native form labels, appropriate input types, autocomplete and input modes. Require only essential information. Group optional details when doing so improves usability, and preserve the agreed enquiry purpose.
+• Respect safe areas, browser chrome, small viewport heights, landscape orientation, enlarged text and the on-screen keyboard.
+Keep fixed headers and action bars from obscuring content, focused controls or validation messages.
+• Respect prefers-reduced-motion from first render. Remove nonessential camera travel and pinning; provide immediate navigation or minimal effects.
+Provide a working motion-off option. A visitor must never need to finish an animation to contact the business.
+• Keep mobile and desktop primary content equivalent. Compact presentations may use understandable tabs or accordions, but do not remove essential information or fetch it only after user interaction. Do not render special keyword content only for crawlers.
+Desktop may retain the approved cinematic sequence with finite scroll travel, stop/reverse behavior and a direct skip route. Present desktop and mobile behavior separately in the storyboard. The mobile defaults above take precedence over a generic request for scrolling or cinematic design unless I explicitly request the same long mobile sequence. Once the mobile storyboard is approved, accurately describe its shorter transition; do not claim it performs a desktop-style physical journey.
+
+Performance as part of the build
+
+• Set a practical mobile performance budget before production. As a starting target, keep initially
+requested mobile imagery around 1 O MB or less when visual qualityallows, excluding genuinely deferred gallery assets. This is a budget to measure and refine, not f an automatic pass/fail standard.
+
+• Use appropriately sized compressed WebP/AVIF or other supported image formats, responsive sreset/sizes, explicit dimensions or aspect ratios, and deliberate mobile framing. A small thumbnail should not download a full-size gallery image.
+
+• Prioritize the actual above-the-fold hero/LCP image and do not lazy-load it. Lazy-load offscreen secondary imagery. Avoid downloading desktop-only intermediate animation plates on phones. Do not hide essential text behind lazy loading or JavaScript fetches triggered by clicks, swipes or scrolling.
+
+• Prefer lightweight transform/opacity animation, avoid unnecessary libraries and large continually animated layers, and keep main-thread work short. Use the current platform's caching and image facilities without disrupting unrelated content or caching authenticated previews publicly.
+
+• Check loading, interaction responsiveness and layout shifts.
+Target good Core Web Vitals: LCP
+≤2.5 seconds, INP ≤200
+milliseconds, CLS ≤0.1 at the 75th percentile of real visits. A lab run is diagnostic and does not prove real-user thresholds are met.
+
+Use an authenticated local/browser audit for a private draft when possible. Do not publish it, expose credentials, create anonymous access or submit protected draft content to an external testing service merely to obtain a score.
+Report unavailable measurements explicitly.
+Visual clarification, storyboard choice, and approval
+Step 1 - Images and logo
+After the initial basics have been answered, make the next step a short images-and-logo choice. Do not include business-offering questions in this step. Present these options:
+A - I have my own images and logo that I will provide.
+B - I have my logo, but I need you to generate the images for me.
+C - You can generate the images and logo for me.
+Ask me to choose A, B, or C. Reuse any assets or asset preference already supplied; if these already establish the choice, proceed without asking again.
+For A, invite me to attach my images and logo. For B, invite me to attach my logo; generate suitable photographic images at the appropriate concept and production stages. For C, create a coordinated logo concept and photographic imagery based on the established business, style, and colors, after resolving the storyboard-creator choice below. Include the proposed logo in the concept presentation. Scene imagery must be photographic; the logo must be clear, legible, and usable at small sizes.
+Briefly mention that reference websites are optional. Do not require references before proceeding. Do not silently replace assets I have chosen to supply with generated ones. Mark any missing assets as pending. Asset-generation permission does not decide who creates the storyboard and does not authorize building or publishing.
+Step 2 - Who creates the storyboard
+After resolving the images-and-logo choice, ask this separate short question
+BEFORE creating a storyboard or generating images that commit to its scene sequence:
+Who would you like to create the storyboard?
+A - You can create the storyboard for me.
+B - 1 will create the storyboard.
+Here, A means the assistant creates it;
+B means the user supplies it. Ask me to choose A or B. If I have already clearly established the choice, reuse it without asking again. Do not assume that choosing generated images or a generated logo means I chose A here.
+For A, develop a project-specific visual journey using the established brief and selected asset approach.
+For B, invite me to share my storyboard in text, sketches, images, or a
+document. Wait for it before inventing a replacement sequence. Review what I supply , preserve its intended actions and order, and ask only about material gaps. Do not rewrite my experience into a different one without agreement.
+Preparatory work that does not decide the visual journey may continue while waiting. Do not build the homepage while the storyboard and concept remain unapproved.
+
+Step 3 - Present the complete storyboard directly in chat
+
+Present the storyboard IN THE CHAT, with representative supplied or generated images embedded beside the relevant explanation. A linked HTML file, PDF, contact sheet, mockup, or generic diagram may supplement the presentation but must not replace it. If a contact sheet is used, number or clearly identify the frames and explain their reading order.
+Show the actual intended photographic style early. Distinguish appearance references, interaction references, and continuity references: a beautiful image alone does not explain movement. Keep the setting, number of scenes, and interaction metaphor specific to the current brief. Do not copy a previous project's structure or apply a fixed environment to every business.
+Explain the complete experience from first load to the final action, including what happens AFTER the introductory animation. Use plain language that lets me picture the sequence without reading code. For every scene or meaningful state, explain:
+• What fills the screen initially: imagery, framing, editable text, navigation, and primary action.
+• What the visitor does: scroll, click, tap, or keyboard input, stated separately when behaviors differ.
+• Exactly what changes visually: viewpoint, apparent movement, focal point, subject position, scale, foreground/background layers, masks, openings, reveals, and text appearance or disappearance as applicable.
+• How the current view connects to the next: what remains aligned, what leaves the frame, what becomes visible, and which additional images or layers make that possible.
+
+• What counts as completing the action and arriving at the next state. Reveal destination content only after the promised visual action completes.
+• What the next scene shows, how visitors continue or choose a branch, how they return, and how they reach the primary business action.
+
+• What happens when input stops, reverses, or interrupts the transition, plus mobile, keyboard, skip, and reduced-motion behavior.
+For every approved scroll-driven sequence (normally desktop only), give a finite 0-100% timeline with project-specific milestones. Explain total scroll travel in screen heights and provide a pixel example for a stated viewport height. Explain approximately how much progress one screen-height of scrolling produces, and any deliberate differences in rate across the sequence. State where pinning starts and ends, when ordinary content scrolling resumes, whether stopping holds the image, and how reverse scrolling behaves. Do not claim a universal number of mouse- & wheel ticks or seconds; wheel settings, gestures, and visitor speed vary. Label proposed timing and scroll-distance values as proposals until tested. When I request a scroll-driven visual action, design scrolling to visibly perform that action on the approved devices. Present the required compact mobile alternative separately; the mobile-first defaults apply unless I explicitly approve long scroll-driven motion on mobile. Do not substitute passive section scrolling, a decorative crop, a click-only transition, or an unexplained image swap. If the action cannot be achieved convincingly with available assets or capabilities, explain the specific limitation and propose a material change for agreement before building it. Do not pretend that a zoom or blend automatically produces a complete visual journey. Include an
+interaction map, practical asset list, and implementation plan. Identify which key views already exist and which intermediate views, cutouts, masks, or mobile crops must still be created. Clearly distinguish illustrative storyboard frames from continuity-ready production assets, and proposed behavior from implemented or tested behavior.
+
+Step 4 - Adjustments, then concept approval
+
+After the complete in-chat storyboard, ask: "Would you like to make any adjustments to the visuals, scene order, interactions, or scroll pace?"
+Do not treat silence as acceptance. If I request changes, revise the relevant storyboard states and explain their impact before asking again about the revised concept. Do not build while material adjustments are unresolved.
+When I am satisfied, obtain approval to build the presented concept unless I have already clearly approved it or explicitly instructed implementation. If I reply with approval or an instruction to proceed, move forward without asking for the same approval again. Routine implementation choices do not need additional approval; material changes to the approved experience do.
+Plan each interaction precisely
+Specify each scene's purpose, editable content, initial state, trigger, focal point, zoom/pan, layer or mask behavior, content reveal, completion condition, and next available actions. Include back, skip, interrupted-transition, responsive, and reduced-motion behavior.
+For scroll-driven sequences, define a
+凶
+project-specific 0-100% timeline.
+Choose milestones based on the actual visual action; do not reuse a fixed set of f percentages or a previous project's
+X
+sequence. Define scroll distance, pin boundaries, scale limits, and the end state.
+Plan click-driven transitions separately.
+Define alignment, image change, arrival, focus placement, and return behavior where applicable. Keep normal reading and content scrolling usable.
+Do not globally cancel wheel/touch input or create a scroll trap.
+Create coordinated image assets
+Before concept approval, and only after the storyboard-creator choice is resolved, list and generate the representative imagery needed to explain the proposed storyboard when consistent with the asset choice. After concept approval, list and generate the O remaining production assets: starting views, destination or detail views, intermediate states, and optional cutout layers or masks. Do not require an approved concept before creating the representative images needed to review it. Generate only what the current stage needs.
+Generate missing photographic scene
+assets yourself using available image-generation tools when consistent with the selected A/B/C option. If supplied images leave a gap, identify it and agree how to fill it before generating replacements. Reuse suitable supplied or approved assets instead of regenerating them unnecessarily. If image generation is unavailable, explain the limitation rather than substituting 3D or claiming the assets were generated.
+Use approved key images as references for subsequent images. Preserve the relevant subjects, materials, lighting, proportions, perspective, and composition. Prioritize natural textures and photographic lighting. Check the transition between images, not just their attractiveness individually.
+Establish a primary visual reference for each connected sequence. Inspect adjacent images for alignment at the intended transition point; do not assume generated viewpoints automatically match. Correct misaligned assets, framing, or masks before relying on a blend to connect them. Assess the actual transition during the focused browser checkpoints.
+Plan desktop and mobile framing so important subjects and interactive choices remain visible. Use alternate crops or assets where necessary.
+Optimize image delivery, avoid unnecessary loading, and keep animation efficient.
+
+Build through backend tools
+
+Automatic installation and completion responsibility
+
+I authorize you to upload, install, activate, configure, and update any site-specific plugin you create that is necessary to implement the approved homepage. Carry out those steps yourself using available authorized access. Do not ask me to upload or install your plugin when you can do it.
+This authorization covers the required plugin and production assets; it does not authorize publishing the homepage or changing unrelated content.
+Before concluding that installation or image upload is unavailable, check the connected MCP capabilities and the existing authorized access for this exact site, including authenticated WordPress REST APIs and configured hosting/deployment access. A missing dedicated MCP tool does not prove that the underlying account lacks the capability. Where an existing connector credential supports the same site's API, X reuse it securely for the authorized task without printing it, placing it in deliverables, or sending it to another domain. Do not search unrelated accounts, bypass authentication, or create new access without authorization.
+
+Package substantial functionality in a maintainable site-specific plugin.
+Upload production images to the site's media library, install and activate the plugin, insert its component into the approved draft, configure its controls and actual enquiry destination, and verify the result in the real WordPress/Elementor rendering context. Do not substitute a local HTML demo for completing and checking the site.
+
+Use existing supported administrative deployment mechanisms where needed. Do not install Code Snippets as a default shortcut. If an already-installed administrative extension is used for a temporary deployment helper, limit it to the current site's approved package and authorized administrators, verify the deployment, and remove or deactivate the helper afterward. Do not change WordPress, theme, or vendor core files.
+
+Do not leave implementation notices such as "install the plugin," "draft preparation," or "component pending" in a homepage presented for review.
+Preserve the last working preview while work is incomplete. Resolve broken styles, missing images, missing components, and disconnected
+interactions before claiming the draft is 0 ready. A successful file upload or plugin • activation alone is not completion.
+If every available authorized installation f route is genuinely blocked, report the exact failed capability or authentication result and the minimum access needed.
+Do not repeatedly ask for permission already supplied or present an untested package as a completed website.
+Continue all independent work and preserve the existing site.
+Use the requested or existing platform.
+Make persistent changes through available MCP tools, authenticated APls, code, or authorized deployment mechanisms. Use browsers for focused inspection and testing, not for constructing the site through visual editing interfaces.
+Batch independent reads and targeted writes. Resolve write failures. Do not change platform core or vendor files.
+Explain real capability limitations before substituting a materially different experience.
+Keep ordinary content native and editable. Place major content destinations in clearly named components or containers. A custom visual component may coordinate the storytelling experience, but must not replace the whole website with a hardcoded embed.
+For WordPress/Elementor projects:
+
+• Use native elements where they meet the design needs. Do not use an HTML widget or Custom HTML block as a whole-page implementation.
+Use Elementor Pro Theme Builder for headers and footers when available; do not substitute Solace's builder or duplicate headers/footers inside content. Do not switch themes without authorization.
+• Create custom Elementor widgets or Atomic Elements when useful and supported by the installed version. Distinguish them accurately; do not assume their capabilities are interchangeable.
+• Package substantial custom functionality in a maintainable site-specific WordPress plugin with editable controls. Do not install Code Snippets merely as a default deployment shortcut.
+• Keep content in named native containers and use understandable destination selectors where feasible. Do not make routine editing depend on internal element
+IDs or code. For other plattorms, apply the same principles through that platform's native editable components and supported extension mechanisms. Expose useful controls for images, labels, destinations, focal positions, zoom strength, timing, scroll distance, responsive behavior, and motion on/off. Only expose controls that actually work. Document dependencies and maintenance.
+Provide visual controls for images and the motion settings the user is expected to adjust routinely. Only claim a control exists when it is implemented and working;
+distinguish implemented controls from planned ones. Document any remaining code-only settings and where they are maintained. Do not use that documentation as a substitute for the routine editing controls required by the approved brief.
+Drafts and publishing
+Keep new work as drafts or in the agreed staging environment until
+publication is authorized for the current O project. Do not change the public homepage assignment or publish unrelated pages. Reuse explicit authorization already given in the current project; never inherit publishing authorization from an unrelated example.
+Scope header and footer template conditions to this homepage. It a platform requires activating or publishing a shared template for a draft preview, follow the current project's authorization and explain any limitation before affecting public pages.
+Two focused browser checkpoints
+Use two bounded visual testing phases, 
+with backend fixes between observations. Avoid constant preview visits or repeated successful checks.
+Checkpoint 1: first representative interaction. Include the mobile first screen and direct action, confirming zero required cinematic scroll and the proposed brief tap transition. After completing the first important transition, inspect the draft or staging preview. Check the intended visual relationship, image quality, readability, progression, and destination reveal.
+Compare the actual movement against the approved storyboard and verify that the promised visual action completes before destination content appears.
+Check actual scroll travel and pace against the proposed values. For scroll-driven motion, check forward progression, stopping, and reversal. Fix issues before expanding the pattern.
+Checkpoint 2: completed experience. 
+Inspect the full approved journey and main visitor tasks. Exercise the actual destinations, return paths, direct navigation, and skip option. Check desktop/mobile layouts, keyboard access, and reduced motion where supported. Confirm content remains readable and usable after transitions.
+Test narrow and short mobile viewports, landscape, touch target spacing, keyboard/focus, no horizontal overflow, form usability and interruption of a transition. Inspect metadata, the initial HTML, image delivery and any available performance measurements.
+Distinguish emulator tests, browser tests, physical-device tests, lab metrics and real-user metrics.
+Refresh within a phase when needed to check a fix. Broaden testing only when failures or unresolved concerns justify it. A supplied reference or existing site may be inspected at the start when
+needed to understand the brief.
+Do not publish drafts or create anonymous access merely to make verification easier. If authenticated access is unavailable, complete supported backend work and state precisely which visual checks remain blocked. Report only observed results; distinguish viewport emulation from physical-device testing.
+
+Content, accessibility, and functionality
+
+ Use real supplied or verified facts. Do not invent offerings, prices, identities, testimonials, credentials, statistics, contact details, or legal links. Use honest pending-content states when information is missing.
+Provide readable headings, contrast, visible focus, labeled controls, appropriate alt text, and semantic content. Hide inactive destinations from keyboard and assistive-technology navigation. Avoid keyboard traps and unexpected focus movement.
+Respect reduced motion with immediate or minimal transitions, readable imagery, and no prolonged pinning. Provide usable content and navigation if animation fails or is disabled.
+Configure forms and integrations using supported actions and actual destinations. Explain whether submissions are stored, emailed, or both. Do not invent recipients or send test communications without an authorized destination.
+
+Search-friendly implementation - required baseline
+
+Build for people and make the real content understandable to search engines. Apply relevant current Google guidance; technical eligibility does not guarantee ranking. Use only the supplied or verified business facts.
+
+Content and rendering
+
+• Deliver meaningful headings, business/service descriptions, location or service area, and the primary action as server-rendered or otherwise reliably pre-rendered HTML. Keep editable text separate from artwork. Verify the content exists in the response and rendered DOM without completing the interactive journey.
+
+• Use a clear main heading and a logical heading structure. Write natural, useful copy around the business's actual offering and location; do not stuff keywords or create repetitive city lists, doorway pages, fabricated testimonials, awards or experience claims.
+
+• Keep essential information equivalent on mobile and desktop.
+Provide accessible, understandable controls for revealed sections, with correct focus handling and inactive-state behavior. Do not confuse visually hidden state with content that has not been loaded at all.
+Use real anchor links and verified destinations. Same-page anchors may select sections, but are not independently indexable property/service pages. Do not claim that each room, tab or hash address can rank as a separate page. Preserve the single-homepage scope: do not create extra pages or expand the sitemap without explicit authorization.
+Explain the limitation when independent listing discovery is a tuture goal.
+• Generated imagery and example inventory must be visibly disclosed where relevant. Do not represent demo properties, prices, availability, people or recognition as verified business evidence.
+Metadata and structured data
+• Set an accurate, descriptive page title and concise meta description.
+Titles and snippets may be rewritten by Google; no exact display is guaranteed. Remove inherited placeholder branding from this page's metadata without changing unrelated site content.
+• Set one consistent canonical URL
+based on the actual authorized publication domain and WordPress page/homepage configuration. Do not canonicalize to an unverified business domain, a preview URL, an authenticated token URL, or an invented destination. Keep it consistent with internal links and sitemap behavior.
+• Include appropriate social sharing metadata and a suitable image when feasible. Keep metadata editable through the existing SEO plugin or documented page-specific controls. Inspect existing SEO tooling first and avoid duplicate/conflicting tags or installing another SEO plugin unnecessarily.
+
+• Add only applicable structured data $ supported by visible, verified facts. 
+Use
+Organization/WebSite/WebPage or a more specific valid type when the facts support it. Use
+LocalBusiness/RealEstateAgent details only when the required real business information is available; do not invent a postal address, phone, business hours, licenses, reviews or ratings to fill a validator.
+• Do not mark up illustrative prices or awards as real offers, reviews, ratings or credentials. Validate
+JSON syntax, required fields, URLs and consistency with visible content. Do not claim that a valid schema type automatically qualifies for a Google rich result. Record when Rich Results Test or Search Console verification remains unperformed.
+• Use descriptive alt text for informative imagery and empty alt text for purely decorative layers. Do not repeat keywords unnaturally in filenames, headings or image descriptions.
+Crawling and launch readiness
+• Preserve draft/staging access and noindex protection until publishing is authorized. Never remove site-wide search restrictions or change robots.txt merely to pass a draft audit.
+Check relevant status codes, redirects, canonical tags, robots directives and sitemap inclusion for the real publication target. Drafts should not appear in the public sitemap. Reuse the existing sitemap system; published pages should be included through supported platform behavior where eligible.
+• Check that public CSS, JavaScript and meaningful images can be fetched and are not unintentionally blocked. Do not promise Google can index a password-protected preview.
+• After authorized publication, verify the public page's status, canonical, robots and sitemap entry. Use Search Console or URL Inspection only with available authorized access. Clearly separate completed implementation from post-launch checks that cannot be performed on a private draft.
+• Do not promise a Google position, ranking timetable, universal guideline compliance, or legal compliance. Report implemented safeguards, observed tests and specific remaining gaps.
+Accessibility is a measurable target, not a certification inferred from using Elementor.
+Deliver the result
+Provide preview and editing links, a brief explanation of the implemented experience, editing instructions, motion-disable instructions, and any custom component's name, version, dependencies, deployment status, and maintainable source/package. Include shared-template editing links when relevant.
+State what was actually tested, what remains unverified, and any missing content or connections. Include the mobile interaction policy, actual transition duration and scroll requirement, editable SEO controls, schema facts used, current indexing status, measured performance results or unmeasured gaps, and post-launch checks still required. Save and link this reusable prompt when asked. Keep project-specific decisions in a separate brief so they do not become defaults for future builds.
+Begin at the next unfinished stage using the current project's existing context and authorization. Before responding or advancing, verify the required conversation order: basics, asset choice, storyboard-creator choice, full in-chat visual explanation, adjustments, and concept approval. Preserve completed stages; do not infer missing decisions.
+
+Official implementation references — verify current versions at build time
+
+• Google Search Essentials:
+
+https://developers.google.com/sear
+ch/docs/essentials
+
+• Google mobile-first indexing:
+
+https://developers.google.com/sear
+ch/docs/crawling=
+indexing/mobile/mobile-sites-mobile-first-indexing
+
+• Google JavaScript SEO:
+https://developers.google.com/sear
+ch/docs/crawling=
+indexing/javascript/javascript-seo-basics
+
+• Google structured data policies:
+https://developers.google.com/search/docs/appearance/structured-data/sa-policies
+
+• Google Organization structured data:
+https://developers.google.com/search/docs/appearance/structured-data/organization
+
+• Google Core Web Vitals:
+https://developers.google.com/search/docs/appearance/core-web-vitals
+
+• WCAG 2.2:
+https://www.w3.org/TR/WCAG22/
+
+• Reduced motion and accessible interaction:
+https://web.dev/learn/accessibility/motion
+
+These references define
+implementation guidance, not a claim that every criterion has been audited or that Google will rank the result.
+
+%#########
+
+
+my business name is wilsonvegas and we buy and sell residential real estate properties in las vegas nevada.
+We want to display our listings and have users contact us regarding our listings.
+We want a high end luxury look because we cater to high end buyers. We want a brown gradient and white color scheme.

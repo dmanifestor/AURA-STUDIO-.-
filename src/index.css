@@ -13,8 +13,9 @@
 
   body {
     font-family: var(--font-body);
-    background-color: #09090b;
-    color: #f4f4f5;
+    background-color: #120a07;
+    background-image: radial-gradient(circle at 50% 0%, #2b180f 0%, #170d09 45%, #0f0705 100%);
+    color: #f6f2ec;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -26,24 +27,24 @@
   }
 }
 
-/* Custom scrollbar for refined editorial presentation */
+/* Custom scrollbar for refined editorial luxury presentation */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #120a07;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #3b2318;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #5a3625;
 }
 
-/* Accessibility focus indicator */
+/* Accessibility focus indicator matching warm bronze/amber */
 :focus-visible {
-  outline: 2px solid #f59e0b;
+  outline: 2px solid #d97706;
   outline-offset: 2px;
 }

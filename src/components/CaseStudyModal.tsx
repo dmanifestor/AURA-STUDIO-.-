@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { X, CheckCircle2, Quote } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CaseStudy } from '../data/portfolioData';
+import { useLanguage } from '../context/LanguageContext';
 
 interface CaseStudyModalProps {
   caseStudy: CaseStudy | null;
@@ -15,18 +16,15 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
   onInitiateSimilarScope,
 }) => {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (!caseStudy) return;
 
-    // Lock background scroll
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-
-    // Focus close button on mount
     closeButtonRef.current?.focus();
 
-    // Keyboard Escape listener
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
@@ -49,7 +47,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto bg-black/85 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto bg-black/90 backdrop-blur-md"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-case-title"
@@ -61,29 +59,29 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl text-zinc-100 flex flex-col my-auto"
+            className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl bg-[#1b100a] border border-amber-900/40 shadow-2xl text-amber-100 flex flex-col my-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Sticky Modal Top Bar with Close Button */}
-            <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-zinc-900/95 backdrop-blur border-b border-zinc-800">
+            <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-[#180e09]/95 backdrop-blur border-b border-amber-900/40">
               <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
-                <span>CASE ARCHIVE</span>
-                <span aria-hidden="true">·</span>
-                <span>{caseStudy.categoryLabel}</span>
+                <span>{t('modal.archive')}</span>
+                <span aria-hidden="true" className="text-amber-800">·</span>
+                <span className="text-amber-200">{caseStudy.categoryLabel}</span>
               </div>
 
               <button
                 ref={closeButtonRef}
                 onClick={onClose}
-                className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
-                aria-label="Close Case Study Details"
+                className="p-2 rounded-lg text-amber-300/80 hover:text-white hover:bg-[#2b170f] transition-colors focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:outline-none"
+                aria-label="Close Estate Details"
               >
                 <X className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
 
             {/* Modal Hero Visual */}
-            <div className="relative aspect-[16/9] w-full bg-zinc-950 overflow-hidden">
+            <div className="relative aspect-[16/9] w-full bg-[#120a07] overflow-hidden">
               <img
                 src={caseStudy.imageSrc}
                 alt={caseStudy.title}
@@ -91,12 +89,12 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                 referrerPolicy="no-referrer"
               />
               <div
-                className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"
+                className="absolute inset-0 bg-gradient-to-t from-[#1b100a] via-[#1b100a]/20 to-transparent"
                 aria-hidden="true"
               />
               <div className="absolute bottom-4 left-6 right-6">
-                <span className="inline-block px-3 py-1 bg-zinc-950/80 backdrop-blur-md border border-zinc-700/80 rounded-md text-amber-400 text-xs font-medium mb-2">
-                  Verified Outcome: {caseStudy.impactMetric}
+                <span className="inline-block px-3 py-1 bg-[#120a07]/85 backdrop-blur-md border border-amber-600/50 rounded-md text-amber-300 text-xs font-semibold mb-2">
+                  {t('modal.outcome')}: {caseStudy.impactMetric}
                 </span>
                 <h2 id="modal-case-title" className="text-2xl sm:text-3xl font-bold font-display text-white">
                   {caseStudy.title}
@@ -106,69 +104,69 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
 
             {/* Modal Core Content */}
             <div className="p-6 sm:p-8 space-y-8">
-              {/* Metadata Row (Unboxed Discipline) */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-3 px-4 rounded-xl bg-zinc-950/60 border border-zinc-800/80 text-xs">
+              {/* Architectural Specifications Row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-3.5 px-4 rounded-xl bg-[#140b07] border border-amber-900/40 text-xs font-mono">
                 <div>
-                  <div className="text-zinc-500 mb-0.5">Client</div>
-                  <div className="font-medium text-zinc-200">{caseStudy.client}</div>
+                  <div className="text-amber-400/80 mb-0.5">Enclave</div>
+                  <div className="font-semibold text-white">{caseStudy.specs.enclave}</div>
                 </div>
                 <div>
-                  <div className="text-zinc-500 mb-0.5">Year</div>
-                  <div className="font-medium text-zinc-200">{caseStudy.year}</div>
+                  <div className="text-amber-400/80 mb-0.5">Dimensions</div>
+                  <div className="font-semibold text-white">{caseStudy.specs.sqft}</div>
                 </div>
                 <div>
-                  <div className="text-zinc-500 mb-0.5">Location</div>
-                  <div className="font-medium text-zinc-200">{caseStudy.location}</div>
+                  <div className="text-amber-400/80 mb-0.5">Accommodations</div>
+                  <div className="font-semibold text-white">{caseStudy.specs.beds} · {caseStudy.specs.baths}</div>
                 </div>
                 <div>
-                  <div className="text-zinc-500 mb-0.5">Domain</div>
-                  <div className="font-medium text-amber-400">{caseStudy.categoryLabel}</div>
+                  <div className="text-amber-400/80 mb-0.5">Valuation Tier</div>
+                  <div className="font-semibold text-amber-300">{caseStudy.priceBracket}</div>
                 </div>
               </div>
 
-              {/* Project Summary */}
+              {/* Property Summary */}
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-2">
-                  Commission Overview
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-amber-300 mb-2">
+                  {t('modal.overview')}
                 </h3>
-                <p className="text-base text-zinc-200 leading-relaxed">
+                <p className="text-base text-amber-100/90 leading-relaxed">
                   {caseStudy.summary}
                 </p>
               </div>
 
               {/* Challenge & Solution Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-5 rounded-xl bg-zinc-950/40 border border-zinc-800/70">
-                  <h4 className="text-sm font-semibold text-zinc-100 mb-2 flex items-center gap-2">
+                <div className="p-5 rounded-xl bg-[#140b07]/80 border border-amber-900/40">
+                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-400" aria-hidden="true" />
-                    The Architectural Challenge
+                    {t('modal.challenge')}
                   </h4>
-                  <p className="text-sm text-zinc-300 leading-relaxed">
+                  <p className="text-sm text-amber-100/80 leading-relaxed">
                     {caseStudy.challenge}
                   </p>
                 </div>
 
-                <div className="p-5 rounded-xl bg-zinc-950/40 border border-zinc-800/70">
-                  <h4 className="text-sm font-semibold text-zinc-100 mb-2 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
-                    The Studio Synthesis
+                <div className="p-5 rounded-xl bg-[#140b07]/80 border border-amber-900/40">
+                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-300" aria-hidden="true" />
+                    {t('modal.solution')}
                   </h4>
-                  <p className="text-sm text-zinc-300 leading-relaxed">
+                  <p className="text-sm text-amber-100/80 leading-relaxed">
                     {caseStudy.solution}
                   </p>
                 </div>
               </div>
 
-              {/* Core Deliverables */}
+              {/* Core Deliverables & Specs */}
               <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-3">
-                  Key Deliverables & Specifications
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-amber-300 mb-3">
+                  {t('modal.deliverables')}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {caseStudy.deliverables.map((item, idx) => (
                     <div
                       key={idx}
-                      className="flex items-start gap-2.5 p-3 rounded-lg bg-zinc-950/50 border border-zinc-800/60 text-xs sm:text-sm text-zinc-300"
+                      className="flex items-start gap-2.5 p-3 rounded-lg bg-[#140b07]/60 border border-amber-900/40 text-xs sm:text-sm text-amber-100"
                     >
                       <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" aria-hidden="true" />
                       <span>{item}</span>
@@ -179,30 +177,30 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
 
               {/* Attributable Client Testimonial */}
               {caseStudy.quote && (
-                <div className="p-6 rounded-xl bg-zinc-950/70 border border-zinc-800/90 relative">
-                  <Quote className="w-6 h-6 text-zinc-700 mb-3" aria-hidden="true" />
-                  <blockquote className="text-sm sm:text-base italic text-zinc-200 leading-relaxed mb-3">
+                <div className="p-6 rounded-xl bg-[#140b07]/90 border border-amber-900/40 relative">
+                  <Quote className="w-6 h-6 text-amber-700/60 mb-3" aria-hidden="true" />
+                  <blockquote className="text-sm sm:text-base italic text-white leading-relaxed mb-3">
                     "{caseStudy.quote.text}"
                   </blockquote>
-                  <div className="text-xs text-zinc-400 font-medium">
-                    — {caseStudy.quote.author}, <span className="text-zinc-500">{caseStudy.quote.role}</span>
+                  <div className="text-xs text-amber-300 font-medium">
+                    — {caseStudy.quote.author}, <span className="text-amber-200/60">{caseStudy.quote.role}</span>
                   </div>
                 </div>
               )}
 
               {/* Direct Conversion Action */}
-              <div className="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <span className="text-xs text-zinc-400">
-                  Seeking similar architectural, brand, or interactive execution?
+              <div className="pt-4 border-t border-amber-900/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <span className="text-xs text-amber-200/70">
+                  {t('modal.prompt')}
                 </span>
                 <button
                   onClick={() => {
                     onClose();
-                    onInitiateSimilarScope(caseStudy.category);
+                    onInitiateSimilarScope('buyer-acquisition');
                   }}
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 text-xs sm:text-sm font-medium transition-colors shadow-sm active:scale-95"
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-500 hover:to-amber-700 text-white text-xs sm:text-sm font-semibold transition-all shadow-md shadow-black/50 active:scale-95 focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:outline-none"
                 >
-                  Initiate Project with this Scope
+                  {t('modal.cta')}
                 </button>
               </div>
             </div>

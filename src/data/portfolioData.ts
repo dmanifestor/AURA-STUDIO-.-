@@ -1,13 +1,13 @@
-import pavilionImg from '../assets/images/project_spatial_pavilion_1792374580257.jpg';
-import brandImg from '../assets/images/project_digital_brand_1792374580436.jpg';
-import luminaImg from '../assets/images/project_interactive_installation_1792374581479.jpg';
-import kansoImg from '../assets/images/hero_studio_architecture_1792374579891.jpg';
+import ridgesImg from '../assets/images/vegas_luxury_estate_1794215022784.jpg';
+import ascayaImg from '../assets/images/vegas_ascaya_promontory_1794216604280.jpg';
+import summitImg from '../assets/images/vegas_estate_interior_1794215037365.jpg';
+import advisoryImg from '../assets/images/vegas_advisory_salon_1794215038306.jpg';
 
 export interface CaseStudy {
   id: string;
   title: string;
   subtitle: string;
-  category: 'spatial' | 'digital' | 'brand';
+  category: 'summerlin' | 'ascaya' | 'offmarket';
   categoryLabel: string;
   client: string;
   year: string;
@@ -16,6 +16,13 @@ export interface CaseStudy {
   imageSrc: string;
   aspectRatio: string;
   featured: boolean;
+  priceBracket: string;
+  specs: {
+    sqft: string;
+    beds: string;
+    baths: string;
+    enclave: string;
+  };
   summary: string;
   challenge: string;
   solution: string;
@@ -46,198 +53,196 @@ export interface MetricProof {
 
 export const STUDIO_METRICS: MetricProof[] = [
   {
-    value: "14",
-    label: "Global Design Awards",
-    context: "Including Red Dot Best of the Best & D&AD Pencils"
-  },
-  {
-    value: "38",
-    label: "Built Commissions",
-    context: "Completed across North America, Scandinavia, & Japan"
-  },
-  {
-    value: "98.4%",
-    label: "Client Retention",
-    context: "Multi-year retainers and consecutive project commissions"
+    value: "$140M+",
+    label: "Private Transaction Volume",
+    context: "Discreet residential real estate acquisitions and dispositions across Las Vegas"
   },
   {
     value: "100%",
-    label: "Carbon Neutral Practice",
-    context: "Rigorous ecological lifecycle auditing on all physical structures"
+    label: "Confidentiality Standard",
+    context: "Every engagement and off-market viewing shielded by bilateral NDA protocol"
+  },
+  {
+    value: "4 Enclaves",
+    label: "Prime Geographic Focus",
+    context: "The Ridges, Ascaya, The Summit Club, and MacDonald Highlands"
+  },
+  {
+    value: "24h",
+    label: "Principal Response Window",
+    context: "Direct communication with managing advisory principals without intermediary delay"
   }
 ];
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    id: "nordic-pavilion",
-    title: "Nordic Glass & Timber Fjord Pavilion",
-    subtitle: "Acoustic ecology & geological architecture in Western Norway",
-    category: "spatial",
-    categoryLabel: "Spatial Architecture",
-    client: "Vestland Nature Trust",
+    id: "the-ridges-cantilever",
+    title: "The Ridges Cantilevered Promontory",
+    subtitle: "Modernist travertine residence framing Red Rock Canyon",
+    category: "summerlin",
+    categoryLabel: "The Ridges & Summerlin",
+    client: "Confidential Family Office",
     year: "2025",
-    location: "Bergen, Norway",
-    impactMetric: "+220% Cultural Visitor Engagement",
-    imageSrc: pavilionImg,
-    aspectRatio: "4/3",
-    featured: true,
-    summary: "A folded mass timber and structural glass pavilion embedded directly into granite bedrock overlooking the Sognefjord, designed for multi-sensory acoustic recitals and environmental contemplation.",
-    challenge: "Constructing a public architectural shelter on a protected, micro-climate coastline subject to 130 km/h fjord winds without disturbing delicate glacial lichen flora.",
-    solution: "Cantilevered post-tensioned mass spruce cassettes prefabricated off-site and airlifted by helicopter onto minimal pin-foundation granite anchors, reducing ground displacement by 85%.",
-    deliverables: [
-      "Site Geological Synthesis & Wind Tunnel Simulation",
-      "Mass Timber Structural Engineering & Prefabrication",
-      "Triple-Glazed Solar Control Envelope",
-      "Integrated Natural Acoustic Reverberation Chamber"
-    ],
-    quote: {
-      text: "AURA crafted an architectural sanctuary that doesn't conquer nature—it breathes with the rhythm of the tides and wind.",
-      author: "Astrid Lindqvist",
-      role: "Director of Cultural Preservation, Vestland"
-    }
-  },
-  {
-    id: "arcane-atelier",
-    title: "Arcane Atelier Bespoke Identity",
-    subtitle: "Tactile monograph branding & physical packaging system",
-    category: "brand",
-    categoryLabel: "Brand Identities",
-    client: "Arcane Haute Parfumerie",
-    year: "2025",
-    location: "London / New York",
-    impactMetric: "+180% Wholesale Placement Rate",
-    imageSrc: brandImg,
-    aspectRatio: "4/3",
-    featured: false,
-    summary: "A tactile brand architecture combining bespoke hot-foil embossed cotton stationery, machined anodized black aluminum membership plates, and bespoke geometric type specimens.",
-    challenge: "Elevating an artisanal perfumery into ultra-luxury boutique retailers while maintaining a non-commercial, artisanal aura free of ostentatious gold clichés.",
-    solution: "Deep blind-debossed 600gsm cotton substrates paired with custom-cast crystal optical prisms and an understated monoline serif wordmark tailored for tactile discovery.",
-    deliverables: [
-      "Custom Monoline Display Typeface (Arcane Sans)",
-      "Uncoated Cotton Paper Stock & Blind Emboss System",
-      "Machined Anodized Metal Client Credentials",
-      "Worldwide Packaging Standards & Brand Constitution"
-    ],
-    quote: {
-      text: "The physical weight and sensory restraint of our packaging convinced Bergdorf Goodman and Harrods within the very first meeting.",
-      author: "Julian Thorne",
-      role: "Founder, Arcane Parfumerie"
-    }
-  },
-  {
-    id: "lumens-void",
-    title: "Lumens Void Interactive Kinetic Sculpture",
-    subtitle: "Real-time generative spatial light installation",
-    category: "digital",
-    categoryLabel: "Digital Systems",
-    client: "Kaldor Arts & Technology Center",
-    year: "2024",
-    location: "Zurich, Switzerland",
-    impactMetric: "480,000+ Physical Visitors",
-    imageSrc: luminaImg,
-    aspectRatio: "4/3",
-    featured: false,
-    summary: "An expansive 14-meter suspended toroid ribbon of programmable volumetric micro-LED arrays reacting in real-time to visitor movement and acoustic resonance over a mirror pool.",
-    challenge: "Synchronizing 42,000 discrete luminous emitters with high-frequency spatial lidar sensors at sub-16ms latency without visible wiring or latency jitter.",
-    solution: "A bespoke WebGL and C++ generative spatial driver communicating over gigabit optical conduits embedded seamlessly inside aircraft-grade structural carbon tubes.",
-    deliverables: [
-      "Generative Spatial Simulation Engine (GLSL & C++)",
-      "High-Precision Lidar Visitor Tracking Mesh",
-      "Polished Black Obsidian Reflection Basin",
-      "Spatial Ambient Soundscape Audio Synthesis"
-    ],
-    quote: {
-      text: "A watershed moment for interactive institutional art where technology dissolves completely into sheer visual poetry.",
-      author: "Dr. Henriette Von Berg",
-      role: "Senior Curator, Kaldor Institute"
-    }
-  },
-  {
-    id: "kanso-studio",
-    title: "AURA Studio Architectural Headquarters",
-    subtitle: "Monolithic concrete & steel studio interior",
-    category: "spatial",
-    categoryLabel: "Spatial Architecture",
-    client: "Self-Commissioned",
-    year: "2024",
-    location: "San Francisco, CA",
-    impactMetric: "AIA San Francisco Honor Award",
-    imageSrc: kansoImg,
+    location: "The Ridges, Summerlin NV",
+    impactMetric: "Acquired Off-Market · $18.5M",
+    imageSrc: ridgesImg,
     aspectRatio: "16/9",
     featured: true,
-    summary: "The studio's own physical laboratory: a double-height industrial concrete shell transformed into a contemplative workshop with monolithic cast desks and raw patinated steel partitions.",
-    challenge: "Creating a multi-disciplinary collaborative atelier that functions simultaneously as a physical model shop, virtual simulation lab, and quiet acoustic sanctuary.",
-    solution: "Strategic zoned acoustic dampening panels hidden behind industrial hot-rolled steel plate panels, balanced by raw board-formed concrete and warm 2700K linear lighting.",
+    priceBracket: "$18,500,000",
+    specs: {
+      sqft: "9,450 SQ FT",
+      beds: "5 Bedrooms",
+      baths: "7 Bathrooms",
+      enclave: "The Ridges Promontory"
+    },
+    summary: "A masterwork of desert modernism perched on a double lot in The Ridges. Features floating post-tensioned bronze rooflines, zero-edge reflection pool with fire features, and automated pocket glass walls opening onto Red Rock Canyon.",
+    challenge: "Securing prime unlisted acreage on Promontory Ridge Drive while preserving absolute privacy and negotiating multi-parcel entitlement rights under strict HOA architectural guidelines.",
+    solution: "Structured an off-market private assignment transaction through bilateral escrow routing, including complete civil engineering and foundation structural audits prior to contract binding.",
     deliverables: [
-      "Adaptive Reuse Architecture & Permitting",
-      "Custom Monolithic Cast Concrete Workstation System",
-      "Concealed Acoustic Resonance Baffles",
-      "Museum-Grade Circadian Light Programming"
-    ]
+      "Off-Market Acquisition Negotiation & Bilateral Escrow",
+      "Structural Envelope & Desert Geotechnical Audit",
+      "Private Architectural Joinery & Millwork Inspection",
+      "Automated Crestron & Lutron Ecosystem Verification"
+    ],
+    quote: {
+      text: "Universal Visual Studio secured an off-market architectural masterpiece we believed was unobtainable, handling every detail with elite discretion.",
+      author: "Marcus Vance",
+      role: "Managing Trustee, Vance Holdings"
+    }
+  },
+  {
+    id: "ascaya-desert-monolith",
+    title: "The Ascaya Desert Horizon Villa",
+    subtitle: "Rammed-earth and steel cliffside estate above the Las Vegas valley",
+    category: "ascaya",
+    categoryLabel: "Ascaya & Henderson",
+    client: "Technology Founder",
+    year: "2024",
+    location: "Ascaya, Henderson NV",
+    impactMetric: "Discreet Disposition · $22.0M",
+    imageSrc: ascayaImg,
+    aspectRatio: "16/9",
+    featured: true,
+    priceBracket: "$22,000,000",
+    specs: {
+      sqft: "11,200 SQ FT",
+      beds: "6 Bedrooms",
+      baths: "9 Bathrooms",
+      enclave: "Ascaya Ridgeline"
+    },
+    summary: "Engineered directly into the volcanic rock mountains of Ascaya, this architectural sanctuary commands unbroken 180-degree panoramas of the Las Vegas Strip skyline. Designed with authentic rammed earth, blackened steel cantilevers, and cascading terraces.",
+    challenge: "Marketing a trophy property without public MLS exposure, ensuring only vetted ultra-high-net-worth buyers received the technical architectural dossier.",
+    solution: "Curated private invitation-only previews in our Summerlin salon, pairing buyers with 3D structural lidar scans and private evening twilight viewings.",
+    deliverables: [
+      "Private Dossier & Drone Elevation Studies",
+      "Confidential Global HNW Buyer Outreach",
+      "Comprehensive Mechanical & Solar Storage Audit",
+      "Bespoke Furniture & Artwork Preservation Agreement"
+    ],
+    quote: {
+      text: "Their understanding of high-end architectural craft combined with discreet transaction mastery sets wilsonvegas in a tier of its own.",
+      author: "Elena Rostova",
+      role: "Private Collector & Principal"
+    }
+  },
+  {
+    id: "summit-club-sanctuary",
+    title: "The Summit Club Modernist Pavilion",
+    subtitle: "Honed Calacatta marble and custom walnut residential sanctuary",
+    category: "offmarket",
+    categoryLabel: "Discreet Off-Market",
+    client: "Institutional Partner",
+    year: "2025",
+    location: "The Summit Club, Summerlin NV",
+    impactMetric: "Private Allocation · $27.5M",
+    imageSrc: summitImg,
+    aspectRatio: "16/9",
+    featured: true,
+    priceBracket: "$27,500,000",
+    specs: {
+      sqft: "10,800 SQ FT",
+      beds: "6 Bedrooms",
+      baths: "8 Bathrooms",
+      enclave: "The Summit Club"
+    },
+    summary: "An ultra-exclusive modernist living pavilion overlooking the private Tom Fazio championship course. Highlights include bookmatched Calacatta marble hearths, custom architectural walnut ceilings, temperature-controlled 1,200-bottle wine gallery, and seamless indoor-outdoor living.",
+    challenge: "Facilitating membership entitlement transfer and confidential ownership structuring within Discovery Land Company's premier guard-gated community.",
+    solution: "Coordinated private advisory with club governors and legal counsel, concluding a turnkey transaction with custom Italian furnishings intact.",
+    deliverables: [
+      "Turnkey Interior Asset Valuation & Curation",
+      "Summit Club Governance & HOA Transfer Navigation",
+      "Thermal Solar & Radiant Floor Performance Verification",
+      "Private Security & Guard-Gate Escort Protocol"
+    ],
+    quote: {
+      text: "The architectural depth they bring to property evaluation is unlike any standard brokerage—they dissect structural truth before signing.",
+      author: "David Sterling",
+      role: "Managing Director, Sterling Capital"
+    }
   }
 ];
 
 export const DISCIPLINES: Discipline[] = [
   {
-    id: "spatial-architecture",
+    id: "buyer-acquisition",
     index: "01",
-    title: "Spatial Architecture & Environments",
-    description: "Physical spaces designed with relentless material clarity, sustainable tectonic rigor, and acoustic presence. From cultural pavilions to headquarters and exhibition spaces.",
+    title: "Private Buyer Acquisition & Off-Market Sourcing",
+    description: "Confidential representation for buyers seeking architectural estates not listed on open public databases. We identify, inspect, and negotiate discreet off-market opportunities throughout Summerlin and Henderson.",
     deliverables: [
-      "Architectural Concept & Spatial Master Planning",
-      "Mass Timber & Sustainable Envelope Engineering",
-      "Interior Materiality & Bespoke Millwork Detailing",
-      "Acoustic Ecology & Circadian Lighting Design"
+      "Confidential Off-Market Opportunity Dossiers",
+      "Site Geological, Foundation & Envelope Diligence",
+      "Bilateral NDA Negotiation & Escrow Routing",
+      "Private Valuations & Architectural Feasibility Reports"
     ],
-    timeframe: "4 – 14 Months",
-    methodology: "Parametric wind and daylight modeling coupled with 1:1 scale physical material mockups.",
-    caseRef: "Nordic Glass & Timber Fjord Pavilion"
+    timeframe: "4–12 Weeks Active Sourcing",
+    methodology: "Direct outreach to property owners, private architectural archives, and confidential trustee networks.",
+    caseRef: "The Ridges Promontory ($18.5M)"
   },
   {
-    id: "digital-systems",
+    id: "seller-representation",
     index: "02",
-    title: "Digital Platforms & Interactive Systems",
-    description: "Flagship digital applications, interactive spatial installations, and high-performance web experiences crafted with zero template dependency and buttery micro-interactions.",
+    title: "Strategic Listing & Discreet Asset Disposition",
+    description: "Bespoke marketing and representation for owners of significant architectural residences. We emphasize privacy, high-caliber editorial imagery, and targeted outreach to verified private buyers worldwide.",
     deliverables: [
-      "Custom Creative Direction & Web Architecture",
-      "Interactive WebGL, Canvas & Spatial Installations",
-      "Design Systems & Component Specifications",
-      "Full-Stack Frontend Engineering & Performance Optimization"
+      "Museum-Grade Architectural Photography & Film",
+      "Curated Private Client Previews (No Public Open Houses)",
+      "Vetted Buyer Financial Qualification Verification",
+      "Direct Principal Negotiation & Closing Management"
     ],
-    timeframe: "2 – 6 Months",
-    methodology: "Fluid interaction prototyping in real code with strict 60fps frame budgets and zero latency.",
-    caseRef: "Lumens Void Interactive Kinetic Sculpture"
+    timeframe: "60–120 Days Custom Placement",
+    methodology: "Invitation-only previews, targeted family office distribution, and total exclusion of mass retail listing portals.",
+    caseRef: "Ascaya Ridgeline ($22.0M)"
   },
   {
-    id: "brand-identities",
+    id: "architectural-advisory",
     index: "03",
-    title: "Comprehensive Brand Systems & Monograph Craft",
-    description: "Identity systems built for longevity rather than algorithmic trends. Distinctive typographic voices, custom paper goods, tangible packaging, and digital brand toolkits.",
+    title: "Land Acquisition & Custom Build Advisory",
+    description: "Guiding clients through custom homesite selection, architectural firm procurement, and design-build governance in Las Vegas's most restrictive luxury enclaves.",
     deliverables: [
-      "Brand Philosophy & Positioning Architecture",
-      "Custom Typeface Design & Wordmark Craft",
-      "Tactile Print, Packaging & Editorial Monographs",
-      "Living Digital Guidelines & Governance"
+      "Topographical Sun & View Corridor Analysis",
+      "HOA Architectural Review Committee (ARC) Alignment",
+      "Architect & General Contractor RFP Curation",
+      "Lifecycle Capital Expenditure & Resale Projections"
     ],
-    timeframe: "6 – 16 Weeks",
-    methodology: "Historical typographic research fused with avant-garde contemporary grid discipline.",
-    caseRef: "Arcane Atelier Bespoke Identity"
+    timeframe: "6–18 Months Development Scope",
+    methodology: "Comprehensive terrain studies, wind tunnel assessments, and zoning ordinance auditing before land close.",
+    caseRef: "The Summit Club Modernist Pavilion"
   }
 ];
 
 export const CLIENT_TESTIMONIALS = [
   {
-    quote: "AURA transformed our entire brand architecture from a conventional luxury name into a culturally revered institution. Within 6 months of launching, qualified inbound commissions increased by +140%.",
-    author: "Marcus Vance",
-    role: "Chief Design Officer",
-    organization: "Vespera Holdings",
-    location: "New York"
+    quote: "Universal Visual Studio navigated our acquisition in The Ridges with military-grade discretion and structural insight. They pointed out building envelope nuances three other brokerages missed entirely.",
+    author: "Harrison Vance",
+    role: "Family Office Director",
+    organization: "Vance Heritage Trust",
+    location: "Summerlin, Las Vegas"
   },
   {
-    quote: "Their team possesses that rarest duality: uncompromising architectural gravitas paired with flawless digital technical execution. They delivered on schedule without a single aesthetic concession.",
+    quote: "Selling an architectural compound in Ascaya requires an advisory that understands concrete, steel, and high-net-worth psychology. The wilsonvegas team delivered an unlisted closing at top market value.",
     author: "Elena Rostova",
-    role: "Managing Director",
-    organization: "Nordic Cultural Foundation",
-    location: "Oslo"
+    role: "Principal & Collector",
+    organization: "Rostova Capital",
+    location: "Henderson, Nevada"
   }
 ];

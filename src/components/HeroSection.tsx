@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { ArrowRight, Compass, ShieldCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 import { STUDIO_METRICS } from '../data/portfolioData';
-import heroStudioImg from '../assets/images/hero_studio_architecture_1792374579891.jpg';
+import vegasEstateImg from '../assets/images/vegas_luxury_estate_1794215022784.jpg';
+import { useLanguage } from '../context/LanguageContext';
 
 interface HeroSectionProps {
   onExploreWorks: () => void;
@@ -15,6 +16,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const { t } = useLanguage();
 
   const cubicEase = [0.16, 1, 0.3, 1] as const;
 
@@ -44,12 +46,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="hero"
-      aria-label="Studio Overview and Statement"
-      className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden border-b border-zinc-800/80"
+      aria-label="Studio Overview and Prime Residential Statement"
+      className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden border-b border-amber-900/30"
     >
-      {/* Subtle atmospheric ambient glow */}
+      {/* Subtle warm bronze ambient glow */}
       <div
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-amber-500/5 blur-[140px] pointer-events-none rounded-full"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-amber-600/10 blur-[150px] pointer-events-none rounded-full"
         aria-hidden="true"
       />
 
@@ -66,30 +68,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Clean unboxed editorial kicker */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-2 text-xs md:text-sm font-medium text-amber-400/90 tracking-wide uppercase mb-4"
+              className="flex items-center gap-2 text-xs md:text-sm font-medium tracking-wide uppercase mb-4"
             >
-              <span>San Francisco</span>
-              <span aria-hidden="true" className="text-zinc-600">·</span>
-              <span>Copenhagen</span>
-              <span aria-hidden="true" className="text-zinc-600">·</span>
-              <span>Global Practice</span>
+              <span className="text-amber-400 font-semibold font-mono">Universal Visual Studio</span>
+              <span aria-hidden="true" className="text-amber-800">·</span>
+              <span className="text-amber-200">wilsonvegas</span>
+              <span aria-hidden="true" className="text-amber-800">·</span>
+              <span className="text-zinc-400">Las Vegas Prime Estates</span>
             </motion.div>
 
-            {/* Display Headline with text-wrap: balance */}
+            {/* Display Headline */}
             <motion.h1
               variants={itemVariants}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] font-display mb-6"
               style={{ textWrap: 'balance' }}
             >
-              Architectural Gravitas Meets Bespoke Digital Systems.
+              {t('hero.title.lead')}{' '}
+              <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
+                {t('hero.title.accent')}
+              </span>
             </motion.h1>
 
             {/* Lead Prose */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg text-zinc-300 max-w-2xl font-normal leading-relaxed mb-8"
+              className="text-base sm:text-lg text-amber-100/80 max-w-2xl font-normal leading-relaxed mb-8"
             >
-              AURA is an avant-garde creative atelier bridging physical space, spatial technology, and enduring brand identities. We collaborate with visionary founders, cultural stewards, and architectural patrons worldwide.
+              {t('hero.desc')}
             </motion.p>
 
             {/* Primary & Secondary Actions */}
@@ -99,27 +104,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             >
               <button
                 onClick={onExploreWorks}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-zinc-950 bg-zinc-100 hover:bg-white rounded-lg transition-all shadow-md hover:shadow-lg active:scale-[0.99] focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-500 hover:to-amber-700 border border-amber-500/50 rounded-lg transition-all shadow-lg shadow-black/50 active:scale-[0.99] focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:outline-none"
               >
-                <span>Explore Selected Works</span>
-                <ArrowRight className="w-4 h-4 text-zinc-800" aria-hidden="true" />
+                <span>{t('hero.cta.primary')}</span>
+                <ArrowRight className="w-4 h-4 text-amber-200" aria-hidden="true" />
               </button>
 
               <button
                 onClick={onInitiateScope}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-zinc-200 bg-zinc-900/90 hover:bg-zinc-800/90 border border-zinc-700/80 rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-amber-100 bg-[#23150d]/80 hover:bg-[#341d13] hover:border-amber-500/60 border border-amber-900/60 rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:outline-none"
               >
-                <span>Initiate Scope Estimator</span>
+                <span>{t('hero.cta.secondary')}</span>
               </button>
             </motion.div>
 
             {/* Quiet Credential Footnote */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-3 mt-8 pt-6 border-t border-zinc-800/60 text-xs text-zinc-400"
+              className="flex items-center gap-3 mt-8 pt-6 border-t border-amber-900/40 text-xs text-amber-200/70"
             >
-              <ShieldCheck className="w-4 h-4 text-zinc-500 shrink-0" aria-hidden="true" />
-              <span>Full lifecycle commitment: from tectonic research through commissioned reality.</span>
+              <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" aria-hidden="true" />
+              <span>Discreet acquisition advisory shielded by bilateral NDA standards.</span>
             </motion.div>
           </motion.div>
 
@@ -130,27 +135,30 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.75, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="relative w-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/60 shadow-2xl flex flex-col justify-end min-h-[380px] sm:min-h-[440px] group">
-              {/* Fallback container if image fails or while loading */}
+            <div
+              data-cursor-label="ESTATE"
+              className="cursor-card relative w-full rounded-2xl overflow-hidden border border-amber-900/40 bg-[#1b100a] shadow-2xl flex flex-col justify-end min-h-[380px] sm:min-h-[440px] group"
+            >
+              {/* Fallback container while loading */}
               {!imageLoaded && !imageError && (
                 <div
-                  className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 animate-pulse flex items-center justify-center"
+                  className="absolute inset-0 bg-gradient-to-br from-[#23130c] via-[#160b07] to-[#23130c] animate-pulse flex items-center justify-center"
                   aria-hidden="true"
                 >
-                  <Compass className="w-8 h-8 text-zinc-600 animate-spin" />
+                  <Compass className="w-8 h-8 text-amber-400 animate-spin" />
                 </div>
               )}
 
               {imageError ? (
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-zinc-950 flex flex-col items-center justify-center p-6 text-center">
-                  <Compass className="w-10 h-10 text-amber-500/70 mb-3" />
-                  <p className="text-sm font-medium text-zinc-300">AURA Studio Atelier View</p>
-                  <p className="text-xs text-zinc-500 mt-1">San Francisco Monolithic Design Shell</p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#23130c] to-[#140b07] flex flex-col items-center justify-center p-6 text-center">
+                  <Compass className="w-10 h-10 text-amber-400 mb-3" />
+                  <p className="text-sm font-medium text-amber-100">The Ridges Cantilevered Promontory</p>
+                  <p className="text-xs text-amber-300/70 mt-1">Summerlin, Las Vegas NV</p>
                 </div>
               ) : (
                 <img
-                  src={heroStudioImg}
-                  alt="AURA Studio physical workshop featuring monolithic concrete reception desk and floor-to-ceiling glass overlooking the city at dusk"
+                  src={vegasEstateImg}
+                  alt="Ultra-luxury modern residential estate in The Ridges, Las Vegas with illuminated infinity pool and Red Rock Canyon at twilight"
                   className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105 ${
                     imageLoaded ? 'opacity-100' : 'opacity-0'
                   }`}
@@ -160,23 +168,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 />
               )}
 
-              {/* Scrim Overlay for Measured Contrast (WCAG AA 4.5:1 text guarantee) */}
+              {/* Scrim Overlay for Measured Contrast (WCAG AA) */}
               <div
-                className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/40 to-transparent pointer-events-none"
+                className="absolute inset-0 bg-gradient-to-t from-[#120a07]/95 via-[#120a07]/40 to-transparent pointer-events-none"
                 aria-hidden="true"
               />
 
               {/* Bottom Card Contextual Overlay */}
               <div className="relative p-6 z-10">
-                <div className="flex items-center gap-2 text-xs text-zinc-400 mb-1.5">
-                  <span className="font-mono text-amber-400">SCENE 01</span>
-                  <span aria-hidden="true">·</span>
-                  <span>Physical Atelier</span>
-                  <span aria-hidden="true">·</span>
-                  <span>37.7904° N, 122.3995° W</span>
+                <div className="flex items-center gap-2 text-xs text-amber-200/80 mb-1.5">
+                  <span className="font-mono text-amber-400 font-semibold">SCENE 01</span>
+                  <span aria-hidden="true" className="text-amber-800">·</span>
+                  <span>The Ridges Promontory</span>
+                  <span aria-hidden="true" className="text-amber-800">·</span>
+                  <span className="text-amber-300 font-mono">36.1472° N, 115.3341° W</span>
                 </div>
                 <h2 className="text-lg font-semibold text-white font-display">
-                  Where spatial models become living landmarks.
+                  Where desert horizon meets architectural gravitas.
                 </h2>
               </div>
             </div>
@@ -185,7 +193,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Full-Width Metric Proof Strip */}
         <motion.div
-          className="pt-8 border-t border-zinc-800/80"
+          className="pt-8 border-t border-amber-900/30"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-40px' }}
@@ -197,7 +205,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             },
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-6">
             {STUDIO_METRICS.map((metric, idx) => (
               <motion.div
                 key={idx}
@@ -209,15 +217,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     transition: { duration: 0.5, ease: cubicEase },
                   },
                 }}
-                className="flex flex-col space-y-1.5 p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/60"
+                className="flex flex-col space-y-1.5 p-4 rounded-xl bg-[#20120b]/60 border border-amber-900/40"
               >
-                <div className="text-2xl sm:text-3xl font-bold font-mono tracking-tight text-white tabular-nums">
+                <div className="text-2xl sm:text-3xl font-bold font-mono tracking-tight text-amber-300 tabular-nums">
                   {metric.value}
                 </div>
-                <div className="text-xs sm:text-sm font-medium text-zinc-200">
+                <div className="text-xs sm:text-sm font-semibold text-white">
                   {metric.label}
                 </div>
-                <div className="text-xs text-zinc-500 leading-snug">
+                <div className="text-xs text-amber-200/60 leading-snug">
                   {metric.context}
                 </div>
               </motion.div>
